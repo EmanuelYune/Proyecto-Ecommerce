@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarNav">
           <ul class="navbar-nav desktop">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home</a>
+              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="faq.php">FAQ</a>
@@ -36,7 +36,7 @@
           </ul>
           <ul class="navbar-nav desktop">
             <li class="nav-item">
-              <a class="nav-link" href="perfil.php">Usuario</a>
+              <a class="nav-link" href="perfil.php">Usuario<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
@@ -48,45 +48,9 @@
         </div>
       </nav>
     </div>
-    <header class="Titulos">
-      <div class="center" style="top: 82px;">
-        <h1 class="">Tesla</h1><br>
-      </div>
-      <div class="center">
-        <p class="display-3">Roadster</p>
-      </div>
-    </header>
-    <main class="center">
-      <div class="container fixed-bottom mb-4">
-        <div class="row">
-          <div class="center-column col-12">
-            <p class=" text-center text-white">
-              ​The quickest car in the world, with record-setting<br>
-              acceleration, range and performance.
-            </p>
-          </div>
-          <div class="center-column col-md-3 col-4">
-            <p class="text-center text-white">
-              1.9<span class="is-size-5 text-white">s</span>
-            </p>
-            <p class="text-center text-white">0-60 mph</p>
-          </div>
-          <div class="center-column col-md-3 col-4" style="border-left: 1px solid gray;">
-            <p class="text-center text-white"><span class="is-size-5">+</span>250<span class="is-size-5">mph</span></p>
-            <p class="text-center text-white">Top Speed</p>
-          </div>
-          <div class="center-column col-md-3 col-4" style="border-left: 1px solid gray;">
-            <p class="title text-center text-white">620</span><span class="is-size-5">mi</span></p>
-            <p class="text-center text-white">Mile Range</p>
-          </div>
-          <div class="center-column col-md-3 col-12">
-            <a class="btn btn-dark text-center text-white" style="width: 100%; border: 0.15em solid white;">
-              Reserve ahora
-            </a>
-          </div>
-        </div>
-      </div>
-    </main>
+    <div>
+        <h1>Perfil</h1>
+    </div>
     <!-- Login Modal -->
     <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
@@ -143,7 +107,6 @@
         </div>
       </div>
     </div><!-- Carrito Modal -->  
-
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
