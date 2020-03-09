@@ -11,8 +11,8 @@
         <tr>
           <th>#</th>
           <th>Nombre</th>
-          <th class="col-md-4">Descripcion</th>
-          <th>Categoria</th>
+          <th class="collapse">Descripcion</th>
+          <th >Categoria</th>
           <th>Precio</th>
           <th>Opciones</th>
         </tr>
@@ -22,21 +22,23 @@
         <tr>
           <th scope="row">{{$product->id}}</th>
           <td>{{$product->nombre}}</td>
-          <td class="col-md-4">{{$product->descripcion}}</td>
-          <td>{{$product->category?$product->category->nombre:''}}</td>
+          <td class="collapse">{{$product->descripcion}}</td>
+          <td >{{$product->category?$product->category->nombre:''}}</td>
           <td>{{$product->precio}}</td>
           <td>
             <form method="post" action="{{url('/admin/products/'.$product->id.'/delete')}}">
               @csrf
-              <a href="{{url('/products/'.$product->id)}}" class="btn btn-primary" target="_blank">
-                <i class="fa fa-edit">ver</i>
-              </a>
-              <a href="{{url('/admin/products/'.$product->id.'/edit')}}" class="btn btn-success">
-                <i class="fa fa-edit">edit</i>
-              </a>
-              <button class="btn btn-danger">
-                <i class="fa fa-times">X</i>
-              </button>
+              <div class="d-flex flex-row">
+                <a href="{{url('/products/'.$product->id)}}" class="btn btn-primary" target="_blank">
+                  <i class="fa fa-eye"></i>
+                </a>
+                <a href="{{url('/admin/products/'.$product->id.'/edit')}}" class="btn btn-success">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <button class="btn btn-danger">
+                  <i class="fa fa-times"></i>
+                </button>
+              </div>
             </form>
           </td>
         </tr>

@@ -17,6 +17,8 @@
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/6bd3fabf53.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -24,12 +26,33 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{{url('/')}}">Inicio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse">
+                <a class="navbar-brand" href="{{url('/')}}">Inicio</a>
+            </div>
+            <div>
+                <form class="form-inline" method="get" action="{{url('/search')}}">
+                    @csrf
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="..." aria-label="Search" name="query">
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
-               
+
+
+
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
@@ -49,10 +72,11 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a href="{{url('/home')}}">Dashboard</a>
+                            <a class="dropdown-item" href="{{url('/')}}">Inicio</a>
+                            <a class="dropdown-item" href="{{url('/home')}}">Dashboard</a>
                             @if(auth()->user()->rol == 'admin')
-                            <a href="{{url('/admin/products')}}">Gestionar Productos</a>
-                            <a href="{{url('/admin/categories')}}">Gestionar Categorias</a>
+                            <a class="dropdown-item" href="{{url('/admin/products')}}">Gestionar Productos</a>
+                            <a class="dropdown-item" href="{{url('/admin/categories')}}">Gestionar Categorias</a>
                             @endif
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -62,7 +86,7 @@
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
-                        </div>
+                        <!-- </div> -->
                     </li>
                     @endguest
                 </ul>

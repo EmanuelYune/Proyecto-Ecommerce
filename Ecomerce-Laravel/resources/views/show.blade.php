@@ -8,10 +8,12 @@
 
         <div class="col-lg-3">
 
-            <h1 class="my-4">Shop</h1>
+            <a class="text-dark" href="{{url('/')}}">
+                <h1 class="my-4">Shop</h1>
+            </a>
             <div class="list-group">
 
-                <a href="#" class="list-group-item">{{$product->category->nombre}}</a>
+                <a href="{{url('/categories/'.$product->category->id)}}" class="list-group-item">{{$product->category->nombre}}</a>
 
             </div>
 

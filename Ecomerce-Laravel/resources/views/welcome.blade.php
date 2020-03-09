@@ -8,12 +8,14 @@
 
         <div class="col-lg-3">
 
-            <h1 class="my-4">Shop</h1>
-            <form class="form-inline my-2 my-lg-0" method="get" action="{{url('/search')}}">
+            <a class="text-dark" href="{{url('/')}}">
+                <h1 class="my-4">Shop</h1>
+            </a>
+            <!-- <form class="form-inline my-2 my-lg-0" method="get" action="{{url('/search')}}">
             @csrf
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="query">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
             <div class="list-group">
                 @foreach($categories as $category)
                 <a href="{{url('/categories/'.$category->id)}}" class="list-group-item">{{$category->nombre}}</a>
@@ -56,7 +58,7 @@
                 @foreach($products as $product)
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="{{$product->Url}}" alt=""></a>
+                        <a href="{{url('/products/'.$product->id)}}"><img class="card-img-top" src="{{$product->Url}}" alt=""></a>
                         <div class="card-body">
                             <h4 class="card-title">
                                 <a href="{{url('/products/'.$product->id)}}">{{$product->nombre}}</a>

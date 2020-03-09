@@ -22,12 +22,14 @@
           <td>
             <form method="post" action="{{url('/admin/categories/'.$category->id.'/delete')}}">
               @csrf
-              <a href="{{url('/admin/categories/'.$category->id.'/edit')}}" class="btn btn-success">
-                <i class="fa fa-edit">edit</i>
-              </a>
-              <button class="btn btn-danger">
-                <i class="fa fa-times">X</i>
-              </button>
+              <div class="d-flex flex-row">
+                <a href="{{url('/admin/categories/'.$category->id.'/edit')}}" class="btn btn-success">
+                  <i class="fa fa-edit"></i>
+                </a>
+                <button class="btn btn-danger">
+                  <i class="fa fa-times"></i>
+                </button>
+              </div>
             </form>
           </td>
         </tr>

@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ url('/admin/products') }}" enctype="multipart/form-data">
                         @csrf
-                        
+
 
                         <div class="form-group row">
                             <label for="category_id" class="col-md-4 col-form-label text-md-right">Categoria</label>
@@ -30,9 +30,9 @@
                                 <input id="nombre" type="text" class="form-control @error('nombre') is-invalid @enderror" name="nombre" value="{{ old('nombre') }}" required autocomplete="nombre" autofocus>
 
                                 @error('nombre')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -44,9 +44,9 @@
                                 <input id="descripcion" type="text" class="form-control @error('descripcion') is-invalid @enderror" name="descripcion" value="{{ old('descripcion') }}" required autocomplete="descripcion" autofocus>
 
                                 @error('descripcion')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -58,9 +58,9 @@
                                 <input id="precio" type="number" step="0.01" class="form-control @error('precio') is-invalid @enderror" name="precio" value="{{ old('precio') }}" required autocomplete="precio">
 
                                 @error('precio')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -72,9 +72,9 @@
                                 <input id="stock" type="number" class="form-control @error('stock') is-invalid @enderror" name="stock" value="{{ old('stock') }}" required autocomplete="stock">
 
                                 @error('stock')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                             <label for="imagen" class="col-md-4 col-form-label text-md-right">Imagen</label>
 
                             <div class="col-md-6">
-                                <input id="imagen" type="file" class="form-control @error('imagen') is-invalid @enderror" name="imagen"  required >
+                                <input id="imagen" type="file" class="form-control @error('imagen') is-invalid @enderror" name="imagen" required>
 
                                 <!-- @error('imagen')
                                     <span class="invalid-feedback" role="alert">

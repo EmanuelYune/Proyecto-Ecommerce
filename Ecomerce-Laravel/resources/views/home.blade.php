@@ -20,7 +20,7 @@
                     <th>#</th>
                     <th>Nombre</th>
                     <th>Precio</th>
-                    <th>Cantidad</th>
+                    <th>Cant</th>
                     <th>Subtotal</th>
                     <th>Opciones</th>
                 </tr>
@@ -34,18 +34,20 @@
                     <td>{{$item->unidades}}</td>
                     <td>{{$item->product->precio * $item->unidades }}</td>
                     <td>
-                        <a href="{{url('/products/'.$item->product->id)}}" class="btn btn-success">
-                            <i class="fa fa-edit">ver</i>
-                        </a>
-                        <form method="post" action="{{url('/item')}}">
-                            {{ method_field('DELETE') }}
-                            @csrf
-                            <input type="hidden" name="item_id" value="{{$item->id}}">
+                        <div class="d-flex flex-row">
+                            <a href="{{url('/products/'.$item->product->id)}}" class="btn btn-success">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <form method="post" action="{{url('/item')}}">
+                                {{ method_field('DELETE') }}
+                                @csrf
+                                <input type="hidden" name="item_id" value="{{$item->id}}">
 
-                            <button type="submit" class="btn btn-danger">
-                                <i class="fa fa-times">X</i>
-                            </button>
-                        </form>
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </form>
+                        </div>
                     </td>
                 </tr>
                 @endforeach
@@ -53,7 +55,7 @@
         </table>
         <div class="d-flex align-content-center">
             <form method="post" action="{{url('/order')}}">
-            @csrf
+                @csrf
                 <button type="submit" class="btn btn-success">Realizar pedido</button>
             </form>
         </div>
