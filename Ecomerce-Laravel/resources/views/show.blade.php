@@ -34,10 +34,11 @@
             <!-- /.card -->
 
             <!-- Button trigger modal -->
+            @if(auth()->user())
             <button type="button" class="btn btn-success my-4" data-toggle="modal" data-target="#exampleModalCentered">
                 Añadir al carrito
             </button>
-
+            @endif
             <!-- Modal -->
             <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">

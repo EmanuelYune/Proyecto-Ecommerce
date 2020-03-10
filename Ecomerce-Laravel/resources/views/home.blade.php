@@ -6,7 +6,7 @@
 
     <div class="row">
 
-        <ul class="nav nav-pills">
+        <ul class="nav nav-pills mb-4">
             <li class="nav-item">
                 <a class="nav-link active" href="#!">Carrito de Compras</a>
             </li>
@@ -35,7 +35,7 @@
                     <td>{{$item->product->precio * $item->unidades }}</td>
                     <td>
                         <div class="d-flex flex-row">
-                            <a href="{{url('/products/'.$item->product->id)}}" class="btn btn-success">
+                            <a href="{{url('/products/'.$item->product->id)}}" class="btn btn-primary">
                                 <i class="fa fa-eye"></i>
                             </a>
                             <form method="post" action="{{url('/item')}}">
